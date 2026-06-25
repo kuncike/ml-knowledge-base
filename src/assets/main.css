@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== 全局滚动条 — 莫兰迪风格 ===== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c6b8b1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8ba09e;
+}
+
+/* ===== 全局基础样式 ===== */
+html {
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Markdown 内容样式增强 ===== */
+.prose-morandi h1 { @apply text-2xl font-semibold text-morandi-text-primary mt-8 mb-4; }
+.prose-morandi h2 { @apply text-xl font-semibold text-morandi-text-primary mt-6 mb-3 pb-1.5 border-b border-morandi-border-light; }
+.prose-morandi h3 { @apply text-lg font-medium text-morandi-text-primary mt-5 mb-2; }
+.prose-morandi p  { @apply leading-relaxed text-morandi-text-primary mb-4; }
+.prose-morandi a  { @apply text-morandi-accent-blue underline underline-offset-2 decoration-morandi-accent-blue/40 hover:decoration-morandi-accent-blue; }
+.prose-morandi ul, .prose-morandi ol { @apply my-3 pl-5 text-morandi-text-primary; }
+.prose-morandi li { @apply leading-relaxed mb-1; }
+.prose-morandi blockquote { @apply border-l-4 border-morandi-accent-green/50 pl-4 italic text-morandi-text-secondary my-4; }
+.prose-morandi table { @apply w-full border-collapse my-4 text-sm; }
+.prose-morandi th { @apply bg-morandi-bg-code px-3 py-2 text-left font-medium text-morandi-text-primary border border-morandi-border-light; }
+.prose-morandi td { @apply px-3 py-2 border border-morandi-border-light text-morandi-text-primary; }
+.prose-morandi code { @apply bg-morandi-bg-code text-morandi-accent-purple rounded px-1.5 py-0.5 text-sm font-mono; }
+.prose-morandi pre { @apply bg-morandi-bg-code rounded-xl p-5 overflow-x-auto my-4 border border-morandi-border-light; }
+.prose-morandi pre code { @apply bg-transparent text-morandi-text-primary p-0; }
+.prose-morandi img { @apply rounded-lg max-w-full my-4; }
+.prose-morandi hr { @apply border-morandi-border-light my-8; }
+
+/* KaTeX 公式样式 */
+.katex { font-size: 1.05em; }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.4em 0; }
