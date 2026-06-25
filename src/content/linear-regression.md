@@ -87,11 +87,11 @@ $$J(\mathbf{w}, b) = \frac{1}{2n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \frac{1}{
 
 ```mermaid
 graph TD
-  A[随机初始化 w, b] --> B[计算预测值 ŷ = Xw + b]
-  B --> C[计算损失 J = MSE(y, ŷ)]
+  A[随机初始化 w, b] --> B["计算预测值 ŷ = Xw + b"]
+  B --> C["计算损失 J = MSE(y, ŷ)"]
   C --> D{损失够小?}
-  D -->|否| E[计算梯度 ∇J]
-  E --> F[w ← w - η·∇J_w<br/>b ← b - η·∇J_b]
+  D -->|否| E["计算梯度 ∇J"]
+  E --> F["w ← w - η·∇J_w<br/>b ← b - η·∇J_b"]
   F --> B
   D -->|是| G[训练完成]
 ```
